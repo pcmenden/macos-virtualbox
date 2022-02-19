@@ -1,5 +1,4 @@
-
-![macOS inside a VirtualBox window with the dock positioned on the left](https://repository-images.githubusercontent.com/156108442/c501b100-0e5a-11eb-8b49-90afd63f5d03 "macos-guest-virtualbox.sh")
+[macOS inside a VirtualBox window with the dock positioned on the left](https://repository-images.githubusercontent.com/156108442/c501b100-0e5a-11eb-8b49-90afd63f5d03 "macos-guest-virtualbox.sh")
 
 ## Push-button installer of macOS on VirtualBox
 
@@ -37,7 +36,7 @@ Developing and maintaining VirtualBox or macOS features is beyond the scope of t
 
 macOS guests on VirtualBox are incompatible with some CPU models. If the guest macOS boot process hangs on “LoadKernelFromStream”, “EndRandomSeed”, or "EXITBS", see the [documentation command](#documentation) regarding VirtualBox CPU profiles and [CPUID settings](https://www.virtualbox.org/manual/ch08.html#vboxmanage-modifyvm-teleport). Some CPU models released in 2020 and later may fail to start or complete the installer, and may require manually adjusting the CPUID settings.
 
-### Upgrading to Big Sur and Monterey 
+### Upgrading to Big Sur and Monterey
 
 The virtual machine may be upgraded to the latest macOS Big Sur (11) and macOS Monterey (12) versions through Software Update. Big Sur may be installed in-place. Monterey may require attaching another volume to the virtual machine and selecting the volume as the installation target, otherwise the upgrade is prone to failing and entering a boot loop.
 
@@ -68,7 +67,6 @@ VirtualBox does not supply an EDID for its virtual display, and macOS does not e
 ### FileVault
 
 The VirtualBox EFI implementation does not properly load the FileVault full disk encryption password prompt upon boot. The bootloader [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.6.9) is able to load the password prompt with the parameter `ProvideConsoleGop` set to `true`. See sample [config.plist](https://github.com/myspaghetti/macos-virtualbox/files/6600860/config.plist.txt)
-
 
 ## Dependencies
 
